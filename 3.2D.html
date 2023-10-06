@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="3.2D.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>HI my name is <div id="name">PRAJJWAL MAKKAR</div>  and Welcome to My Portfolio</h1>
+        <h3> polishing my
+            skills and transforming me into a professional, hone my Computer Programming Skills and technical
+            skills that will help me becoming a successful software professional.</h3>
+            <img src="WhatsApp Image 2023-09-29 at 13.01.10_22e64090.jpg" alt="">
+        
+
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <h4>Tech skills</h4>
+        <p>I am a passionate web developer with expertise in Vue.js, HTML, and CSS.
+        </p>
+        
+           <h4>Strength and Functional skills</h4> <p>
+            • Quick learner, adaptive as well as co-operative. <br>
+• Proficient in MS Excel, WORD and PowerPoint. <br>
+• Well versed with Internet and computers. <br>
+• Keen interest in latest technologies. <br>
+           </p>
+
+
+        
+    </section>
+
+    
+    <a href="#contactForm">FeedBack on us?</a>
+
+    <div style="border: 2px solid blue; background-color: rgb(60, 237, 237); display: inline;"> 
+        <form id="contactForm" action="/random" method="post" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" placeholder="Write your feedback here..." required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+   
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            
+            // Basic email validation (can be enhanced based on requirements)
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (name === "" || email === "" || !emailPattern.test(email)) {
+                alert("Please enter valid name and email address.");
+                return false; // Prevent form submission
+            }
+            
+            // Form submission logic can be added here
+            
+            return true; // Allow form submission
+        }
+    </script>
+
+                    <div id="app">
+                        <navbar></navbar>
+
+                        <router-view></router-view>
+
+                        <contact-form></contact-form>
+                    </div>
+
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Mobile: +91-8222000067 <br><br>
+            Email: prajjwalmakkar57@gmail.com <br><br>
+            <a href="https://www.linkedin.com/in/prajjwal-makkar-311870293">Linked In</a><br><br>
+            <a href="https://github.com/Prajjwal-creator">GitHub Profile</a></p>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0/dist/vue.global.prod.js"></script>
+    <script src="3.2D.js"></script>
+</body>
+</html>
